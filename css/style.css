@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    gap: 10px;
+}
+title {
+    display: none;
+}
+hr {
+    width: 100%;
+}
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #882222;
+    text-transform: uppercase;
+}
+#newBook {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px;
+}
+#width40 {
+    width: 40%;
+}
+h3 {
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+#cssBorrar {
+    color: #ff0000;
+    text-decoration: none;
+    text-transform: uppercase;
+}

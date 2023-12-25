@@ -1,0 +1,15 @@
+# Regla que dice si un directorio es un enlace simbólico, que lo siga.
+Options +FollowSymLinks
+# Regla donde le decimos a Apache que queremos sobre escribir las URLs para crear URLs amigables.
+RewriteEngine on
+# Regla de reescritura: RewriteRule ^url-amigable-aqui$ url-no-amigable-va-aqui.php
+# Si no escribes nada automaticamente te diridige al controlador princiapl de la página
+RewriteRule ^$ controller/principal.php
+# Si la ruta contiene BorrarLibro va al controlador encargado de borrar el libro con el id indicado en la ruta
+RewriteRule ^BorrarLibro/([0-9]+)$ controller/borrarLibro.php?id=$1
+# Si la ruta contiene Libros va al controlador encargado de mostar el formualio para agregar un nuevo libro
+RewriteRule ^Libros$ controller/formContLibro.inc.php
+# Si la ruta contiene GrabarLibro va al controlador encargado de guardar el libro en la base de datos
+RewriteRule ^GrabarLibro$ controller/grabarLibro.php
+# Ruta para el estilo de la página
+RewriteRule ^css/style$ css/style.css
